@@ -39,7 +39,7 @@ namespace PokeTools
             session = CreateSession(position);
             session.Player.Inventory.Update += InventoryOnUpdate;
             session.Map.Update += MapOnUpdate;
-            session.Startup();
+            
 
             Application.Run(new MainWindow(session));
         }
