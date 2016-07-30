@@ -33,6 +33,8 @@
             this.btnGetLocation = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtLink = new System.Windows.Forms.TextBox();
+            this.btnContinue = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -56,11 +58,11 @@
             // 
             // btnGetLocation
             // 
-            this.btnGetLocation.Location = new System.Drawing.Point(344, 68);
+            this.btnGetLocation.Location = new System.Drawing.Point(323, 68);
             this.btnGetLocation.Name = "btnGetLocation";
-            this.btnGetLocation.Size = new System.Drawing.Size(101, 23);
+            this.btnGetLocation.Size = new System.Drawing.Size(122, 23);
             this.btnGetLocation.TabIndex = 1;
-            this.btnGetLocation.Text = "Get Location";
+            this.btnGetLocation.Text = "Show location on map";
             this.btnGetLocation.UseVisualStyleBackColor = true;
             this.btnGetLocation.Click += new System.EventHandler(this.btnGetLocation_Click);
             // 
@@ -82,16 +84,38 @@
             this.txtLink.Size = new System.Drawing.Size(419, 20);
             this.txtLink.TabIndex = 0;
             // 
+            // btnContinue
+            // 
+            this.btnContinue.Location = new System.Drawing.Point(13, 152);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(122, 23);
+            this.btnContinue.TabIndex = 4;
+            this.btnContinue.Text = "This is my location";
+            this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(323, 152);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(122, 23);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Exit Poketools";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // LocationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 261);
+            this.ClientSize = new System.Drawing.Size(457, 187);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnGetLocation);
             this.Controls.Add(this.groupBox1);
             this.Name = "LocationForm";
-            this.Text = "LocationForm";
+            this.Text = "PokeTools";
             this.Load += new System.EventHandler(this.LocationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -108,5 +132,7 @@
         private System.Windows.Forms.Button btnGetLocation;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtLink;
+        private System.Windows.Forms.Button btnContinue;
+        private System.Windows.Forms.Button btnClose;
     }
 }

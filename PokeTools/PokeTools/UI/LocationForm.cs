@@ -10,7 +10,8 @@ namespace PokeTools.UI
     public partial class LocationForm : Form
     {
         private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private GoogleLocationService locationService = new GoogleLocationService();
+        private static GoogleLocationService locationService = new GoogleLocationService();
+        private static string LOCATION_ERROR = "An error occured while trying to parse position.";
         public MapPoint position { get; private set; }
         public LocationForm()
         {
@@ -33,11 +34,29 @@ namespace PokeTools.UI
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occured while trying to parse position.");
+                    MessageBox.Show(LOCATION_ERROR);
                     logger.Error(ex.Message);
                 }
             }
-            
+        }
+
+        private void btnContinue_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                position = locationService.GetLatLongFromAddress(this.txtAddress.Text);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(LOCATION_ERROR);
+                logger.Error(ex.Message);
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using log4net;
+﻿using GoogleMaps.LocationServices;
+using log4net;
+using POGOLib.Net;
 using PokeTools.UI;
 using System;
 using System.Collections.Generic;
@@ -23,11 +25,28 @@ namespace PokeTools
             log4net.Config.XmlConfigurator.Configure();
 
             //TODO if closing then end application
+
+            MapPoint position = GetPosition();
+            while (position == null)
+            {
+                MessageBox.Show("Entered location is invalid.");
+                position = GetPosition();
+            }
+            Session session;
+            session = CreateSession(position);
+        }
+
+        private static MapPoint GetPosition()
+        {
             LocationForm locationForm = new LocationForm();
             Application.Run(locationForm);
-
-            LoginForm loginForm = new LoginForm(locationForm.position.Latitude, locationForm.position.Longitude);
+            return locationForm.position;
+        }
+        private static Session CreateSession(MapPoint position)
+        {
+            LoginForm loginForm = new LoginForm(position.Latitude, position.Longitude);
             Application.Run(loginForm);
+            return loginForm.CurrentSession;
         }
     }
 }
