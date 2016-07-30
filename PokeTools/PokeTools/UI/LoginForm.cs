@@ -35,7 +35,7 @@ namespace PokeTools.UI
 
         private void btnLoginGoogle_Click(object sender, EventArgs e)
         {
-            if (TryLogin(LoginProvider.PokemonTrainerClub))
+            if (TryLogin(LoginProvider.GoogleAuth))
             {
                 EXIT_APP = false;
                 this.Close();
