@@ -40,9 +40,9 @@
             // 
             // btnLoginPTC
             // 
-            this.btnLoginPTC.Location = new System.Drawing.Point(12, 131);
+            this.btnLoginPTC.Location = new System.Drawing.Point(19, 150);
             this.btnLoginPTC.Name = "btnLoginPTC";
-            this.btnLoginPTC.Size = new System.Drawing.Size(105, 28);
+            this.btnLoginPTC.Size = new System.Drawing.Size(203, 28);
             this.btnLoginPTC.TabIndex = 0;
             this.btnLoginPTC.Text = "Login with Pokemon Trainer Club";
             this.btnLoginPTC.UseVisualStyleBackColor = true;
@@ -86,9 +86,9 @@
             // 
             // btnLoginGoogle
             // 
-            this.btnLoginGoogle.Location = new System.Drawing.Point(123, 131);
+            this.btnLoginGoogle.Location = new System.Drawing.Point(19, 116);
             this.btnLoginGoogle.Name = "btnLoginGoogle";
-            this.btnLoginGoogle.Size = new System.Drawing.Size(105, 28);
+            this.btnLoginGoogle.Size = new System.Drawing.Size(203, 28);
             this.btnLoginGoogle.TabIndex = 3;
             this.btnLoginGoogle.Text = "Login with Google";
             this.btnLoginGoogle.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(243, 184);
+            this.ClientSize = new System.Drawing.Size(243, 190);
             this.Controls.Add(this.btnLoginGoogle);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
