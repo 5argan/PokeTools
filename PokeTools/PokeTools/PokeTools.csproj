@@ -80,6 +80,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Data\IPokemon.cs" />
+    <Compile Include="Core\Data\IPokemonEgg.cs" />
+    <Compile Include="Core\Data\IIncubator.cs" />
     <Compile Include="UI\LocationForm.cs">
       <SubType>Form</SubType>
     </Compile>

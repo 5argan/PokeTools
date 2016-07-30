@@ -1,17 +1,9 @@
-﻿using Google.Protobuf;
-using GoogleMaps.LocationServices;
+﻿using GoogleMaps.LocationServices;
 using log4net;
-using Newtonsoft.Json;
 using POGOLib.Net;
-using POGOProtos.Networking.Requests;
-using POGOProtos.Networking.Requests.Messages;
-using POGOProtos.Networking.Responses;
+using POGOLib.Pokemon;
 using PokeTools.UI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PokeTools
@@ -47,6 +39,7 @@ namespace PokeTools
         private static void InventoryOnUpdate(object sender, EventArgs eventArgs)
         {
             logger.Info("Inventory was updated.");
+            logger.Debug(((Inventory)sender).InventoryItems.ToString());
         }
 
         private static void MapOnUpdate(object sender, EventArgs eventArgs)
