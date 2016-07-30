@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnLoginPTC = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnLoginGoogle = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnLogin
+            // btnLoginPTC
             // 
-            this.btnLogin.Location = new System.Drawing.Point(12, 131);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(105, 28);
-            this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLoginPTC.Location = new System.Drawing.Point(12, 131);
+            this.btnLoginPTC.Name = "btnLoginPTC";
+            this.btnLoginPTC.Size = new System.Drawing.Size(105, 28);
+            this.btnLoginPTC.TabIndex = 0;
+            this.btnLoginPTC.Text = "Login with Pokemon Trainer Club";
+            this.btnLoginPTC.UseVisualStyleBackColor = true;
+            this.btnLoginPTC.Click += new System.EventHandler(this.btnLoginPTC_Click);
             // 
             // groupBox1
             // 
@@ -84,25 +84,25 @@
             this.txtPassword.TabIndex = 0;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // btnCancel
+            // btnLoginGoogle
             // 
-            this.btnCancel.Location = new System.Drawing.Point(123, 131);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(105, 28);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnLoginGoogle.Location = new System.Drawing.Point(123, 131);
+            this.btnLoginGoogle.Name = "btnLoginGoogle";
+            this.btnLoginGoogle.Size = new System.Drawing.Size(105, 28);
+            this.btnLoginGoogle.TabIndex = 3;
+            this.btnLoginGoogle.Text = "Login with Google";
+            this.btnLoginGoogle.UseVisualStyleBackColor = true;
+            this.btnLoginGoogle.Click += new System.EventHandler(this.btnLoginGoogle_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(243, 184);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnLoginGoogle);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnLoginPTC);
             this.Name = "LoginForm";
             this.Text = "Login";
             this.groupBox1.ResumeLayout(false);
@@ -115,11 +115,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnLoginPTC;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnLoginGoogle;
     }
 }

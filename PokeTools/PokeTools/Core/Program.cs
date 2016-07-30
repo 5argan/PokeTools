@@ -23,9 +23,7 @@ namespace PokeTools
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             log4net.Config.XmlConfigurator.Configure();
-
-            //TODO if closing then end application
-
+            
             MapPoint position = GetPosition();
             while (position == null)
             {
@@ -40,6 +38,7 @@ namespace PokeTools
         {
             LocationForm locationForm = new LocationForm();
             Application.Run(locationForm);
+            logger.Debug("found location");
             return locationForm.position;
         }
         private static Session CreateSession(MapPoint position)
