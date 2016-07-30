@@ -56,7 +56,24 @@ namespace PokeTools.UI
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            ExitApplication();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                ExitApplication();
+            }
+        }
+
+        private void ExitApplication()
+        {
+            if (MessageBox.Show("Are you sure you want to exit PokeTools?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
         }
     }
 }

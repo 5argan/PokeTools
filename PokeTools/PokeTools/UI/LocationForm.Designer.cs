@@ -115,6 +115,7 @@
             this.Controls.Add(this.btnGetLocation);
             this.Controls.Add(this.groupBox1);
             this.Name = "LocationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PokeTools";
             this.Load += new System.EventHandler(this.LocationForm_Load);
             this.groupBox1.ResumeLayout(false);
